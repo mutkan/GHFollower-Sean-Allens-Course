@@ -9,11 +9,22 @@
 import UIKit
 
 class SearchVC: UIViewController {
+    
+    let logoImageView       = UIImageView()
+    let usernameTextField   = GFTextField()
+    let callToActionButton  = GFButton(backgroundColor: .systemGreen, title: "Get FOllowers")
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .systemPink
+        view.backgroundColor = .systemBackground
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
     }
 
 }
