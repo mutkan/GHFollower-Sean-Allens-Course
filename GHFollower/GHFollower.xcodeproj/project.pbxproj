@@ -81,6 +81,17 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		62299B9B23D4447D00429309 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				62B6D03723C8361C00C5723E /* AppDelegate.swift */,
+				62B6D03923C8361C00C5723E /* SceneDelegate.swift */,
+				62B6D04023C8361F00C5723E /* Assets.xcassets */,
+				62B6D04223C8361F00C5723E /* LaunchScreen.storyboard */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 		62B6D02B23C8361C00C5723E = {
 			isa = PBXGroup;
 			children = (
@@ -100,14 +111,11 @@
 		62B6D03623C8361C00C5723E /* GHFollower */ = {
 			isa = PBXGroup;
 			children = (
+				62B6D04523C8361F00C5723E /* Info.plist */,
+				62299B9B23D4447D00429309 /* Support */,
 				62299B9A23D4434B00429309 /* Extensions */,
 				62299B9923D4430D00429309 /* Custom Views */,
 				62299B9823D442A400429309 /* Screens */,
-				62B6D03723C8361C00C5723E /* AppDelegate.swift */,
-				62B6D03923C8361C00C5723E /* SceneDelegate.swift */,
-				62B6D04023C8361F00C5723E /* Assets.xcassets */,
-				62B6D04223C8361F00C5723E /* LaunchScreen.storyboard */,
-				62B6D04523C8361F00C5723E /* Info.plist */,
 			);
 			path = GHFollower;
 			sourceTree = "<group>";
