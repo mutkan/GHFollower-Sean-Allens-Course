@@ -23,6 +23,7 @@ class FollowerListVC: UIViewController {
         configureCollectionView()
         configureViewController()
         getFollowers()
+        configureDatSource()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -70,6 +71,15 @@ class FollowerListVC: UIViewController {
         flowLayout.sectionInset         = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
         flowLayout.itemSize             = CGSize(width: itemWidth, height: itemWidth + 40)
         return flowLayout
+    }
+    
+    
+    func configureDatSource() {
+        dataSource = UICollectionViewDiffableDataSource<Section, Follower>(collectionView: collectionView, cellProvider: { (collection, indexpath, follower) -> UICollectionViewCell? in
+            let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: FollowerCell.reuseID, for: indexpath) as! FollowerCell
+            cell.set(follower: follower)
+            return cell
+        })
     }
 
 }
