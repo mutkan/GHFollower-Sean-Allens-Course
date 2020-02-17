@@ -47,10 +47,24 @@ class FollowerListVC: UIViewController {
     
     
     func configureCollectionView() {
-        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UICollectionViewFlowLayout())
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createThreeColumnFlowLayout())
         view.addSubview(collectionView)
         collectionView.backgroundColor = .systemPink
         collectionView.register(FollowerCell.self, forCellWithReuseIdentifier: FollowerCell.reuseID)
+    }
+    
+    
+    func createThreeColumnFlowLayout() -> UICollectionViewFlowLayout {
+        let width                       = view.bounds.width //get the views total width
+        let padding: CGFloat            = 12 // padding is the space between the edge of the phone and the first (or last) column
+        let minimumItemSpacing: CGFloat = 10 // space between each cell
+        let availableWidth              = width - (padding * 2) - (minimumItemSpacing * 2) // get the real available width space
+        let itemWidth                   = availableWidth / 3 // now from that real available space get the space for each cell
+        
+        let flowLayout                  = UICollectionViewFlowLayout()
+        flowLayout.sectionInset         = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
+        flowLayout.itemSize             = CGSize(width: itemWidth, height: itemWidth + 40) // the 40 are just because the FollowerCell has a label at the bottom (with a size of 20) but it can be anything (40, 50, 20, etc)
+        return flowLayout
     }
 
 }
