@@ -17,6 +17,7 @@ class FollowerListVC: UIViewController {
     var username: String!
     var followers: [Follower] = []
     var page = 1
+    var hasMoreFollowers = true
         
     var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<Section, Follower>!
@@ -47,7 +48,8 @@ class FollowerListVC: UIViewController {
             
             switch result {
             case .success(let followers):
-                self.followers = followers
+                if followers.count < 100 { self.hasMoreFollowers = false }
+                self.followers.append(contentsOf: followers)
                 self.updateData()
                 
             case .failure(let error):
@@ -92,6 +94,7 @@ extension FollowerListVC: UICollectionViewDelegate {
         let height          = scrollView.frame.size.height
         
         if offsetY > (contentHeigth - height) {
+            guard hasMoreFollowers else { return }
             page += 1
             getFollowers(username: username, page: page)
         }
