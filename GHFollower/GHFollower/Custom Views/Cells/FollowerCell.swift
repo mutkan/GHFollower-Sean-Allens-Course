@@ -25,6 +25,12 @@ class FollowerCell: UICollectionViewCell {
     }
     
     
+//    override func prepareForReuse() {
+//        super.prepareForReuse()
+//        avatarImageView.image = UIImage(named: "avatar-placeholder")
+//    }
+    
+    
     func set(follower: Follower) {
         usernameLabel.text = follower.login
         avatarImageView.donwloadImage(from: follower.avatarUrl)
