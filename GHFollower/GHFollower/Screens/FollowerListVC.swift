@@ -25,6 +25,7 @@ class FollowerListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCollectionView()
+        configureSearchController()
         configureViewController()
         getFollowers(username: username, page: page)
         configureDatSource()
@@ -39,6 +40,15 @@ class FollowerListVC: UIViewController {
     func configureViewController() {
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
+    
+    func configureSearchController() {
+        let searchController                                    = UISearchController()
+        searchController.searchResultsUpdater                   = self
+        searchController.searchBar.placeholder                  = "Search for a username"
+        searchController.obscuresBackgroundDuringPresentation   = false
+        navigationItem.searchController                         = searchController
     }
     
     
@@ -106,4 +116,13 @@ extension FollowerListVC: UICollectionViewDelegate {
             getFollowers(username: username, page: page)
         }
     }
+}
+
+// MARK: - UISearchResultsUpdating
+extension FollowerListVC: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        
+    }
+    
+    
 }
