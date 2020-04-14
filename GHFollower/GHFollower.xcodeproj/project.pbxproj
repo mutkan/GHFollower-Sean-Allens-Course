@@ -78,13 +78,13 @@
 		62299B9923D4430D00429309 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				62AA72B924454DF3007879B7 /* Labeles */,
+				62AA72B824454DBD007879B7 /* ViewControllers */,
+				62AA72B724454DB4007879B7 /* ImageViews */,
+				62AA72B624454D95007879B7 /* TextFields */,
+				62AA72B524454D8B007879B7 /* Buttons */,
+				62AA72B424454D79007879B7 /* Views */,
 				62C75FF623F8E70A00B6CC5B /* Cells */,
-				62299B9423D41AA500429309 /* GFAlertVC.swift */,
-				62B6D16F23CAD8EE00C5723E /* GFButton.swift */,
-				62B6D17123CADC8F00C5723E /* GFTextField.swift */,
-				62299B9023D4166300429309 /* GFTitleLabel.swift */,
-				62299B9223D4192E00429309 /* GFBodyLabel.swift */,
-				62C75FF923F8E97400B6CC5B /* GFAvatarImageView.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -106,6 +106,54 @@
 				62B6D04223C8361F00C5723E /* LaunchScreen.storyboard */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		62AA72B424454D79007879B7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		62AA72B524454D8B007879B7 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				62B6D16F23CAD8EE00C5723E /* GFButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		62AA72B624454D95007879B7 /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				62B6D17123CADC8F00C5723E /* GFTextField.swift */,
+			);
+			path = TextFields;
+			sourceTree = "<group>";
+		};
+		62AA72B724454DB4007879B7 /* ImageViews */ = {
+			isa = PBXGroup;
+			children = (
+				62C75FF923F8E97400B6CC5B /* GFAvatarImageView.swift */,
+			);
+			path = ImageViews;
+			sourceTree = "<group>";
+		};
+		62AA72B824454DBD007879B7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				62299B9423D41AA500429309 /* GFAlertVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		62AA72B924454DF3007879B7 /* Labeles */ = {
+			isa = PBXGroup;
+			children = (
+				62299B9023D4166300429309 /* GFTitleLabel.swift */,
+				62299B9223D4192E00429309 /* GFBodyLabel.swift */,
+			);
+			path = Labeles;
 			sourceTree = "<group>";
 		};
 		62B6D02B23C8361C00C5723E = {
