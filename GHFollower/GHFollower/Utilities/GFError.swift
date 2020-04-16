@@ -1,8 +1,8 @@
 //
-//  ErrorMessage.swift
+//  GFError.swift
 //  GHFollower
 //
-//  Created by Roberto Halgravez on 2/2/20.
+//  Created by Roberto Halgravez on 4/15/20.
 //  Copyright © 2020 Roberto Halgravez. All rights reserved.
 //
 
