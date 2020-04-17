@@ -16,6 +16,7 @@
 		62AA72BF24481855007879B7 /* GFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AA72BE24481855007879B7 /* GFError.swift */; };
 		62AA72C1244949D5007879B7 /* GFUserInfoHeaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AA72C0244949D5007879B7 /* GFUserInfoHeaderVC.swift */; };
 		62AA72C324494A5D007879B7 /* GFSecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AA72C224494A5D007879B7 /* GFSecondaryTitleLabel.swift */; };
+		62AA72C724495D2D007879B7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AA72C624495D2D007879B7 /* Constants.swift */; };
 		62B2953124145BBE0005183C /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B2953024145BBE0005183C /* UIHelper.swift */; };
 		62B6D03823C8361C00C5723E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B6D03723C8361C00C5723E /* AppDelegate.swift */; };
 		62B6D03A23C8361C00C5723E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B6D03923C8361C00C5723E /* SceneDelegate.swift */; };
@@ -43,6 +44,7 @@
 		62AA72BE24481855007879B7 /* GFError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFError.swift; sourceTree = "<group>"; };
 		62AA72C0244949D5007879B7 /* GFUserInfoHeaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFUserInfoHeaderVC.swift; sourceTree = "<group>"; };
 		62AA72C224494A5D007879B7 /* GFSecondaryTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFSecondaryTitleLabel.swift; sourceTree = "<group>"; };
+		62AA72C624495D2D007879B7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		62B2953024145BBE0005183C /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		62B6D03423C8361C00C5723E /* GHFollower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHFollower.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62B6D03723C8361C00C5723E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 			children = (
 				62AA72BE24481855007879B7 /* GFError.swift */,
 				62B2953024145BBE0005183C /* UIHelper.swift */,
+				62AA72C624495D2D007879B7 /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				62B6D17023CAD8EE00C5723E /* GFButton.swift in Sources */,
 				62299B9723D43DDA00429309 /* UIViewController+Ext.swift in Sources */,
 				62B2953124145BBE0005183C /* UIHelper.swift in Sources */,
+				62AA72C724495D2D007879B7 /* Constants.swift in Sources */,
 				62C75FFA23F8E97400B6CC5B /* GFAvatarImageView.swift in Sources */,
 				62B6D04C23C8436400C5723E /* SearchVC.swift in Sources */,
 				62299B9523D41AA500429309 /* GFAlertVC.swift in Sources */,
