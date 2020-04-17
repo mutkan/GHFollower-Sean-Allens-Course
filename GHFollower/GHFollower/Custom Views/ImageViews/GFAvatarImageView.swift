@@ -31,7 +31,7 @@ class GFAvatarImageView: UIImageView {
     }
     
     
-    func donwloadImage(from urlString: String) {
+    func downloadImage(from urlString: String) {
         let cacheKey = NSString(string: urlString)
         
         if let image = cache.object(forKey: cacheKey) {
