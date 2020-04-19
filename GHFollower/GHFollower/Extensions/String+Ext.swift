@@ -18,4 +18,10 @@ extension String {
         
         return dateFormatter.date(from: self)
     }
+    
+    
+    func  convertToDisplaeyFormat() -> String {
+        guard let date = self.convertToDate() else { return "N/A" }
+        return date.convertToMonthYearForamt()
+    }
 }
