@@ -127,6 +127,16 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
+		6245B323244C3E440023299A /* ItemInfoVCs */ = {
+			isa = PBXGroup;
+			children = (
+				626D98E3244AB8D700EC6D88 /* GFItemInfoVC.swift */,
+				6245B31D244C39630023299A /* GFRepoItemVC.swift */,
+				6245B321244C3DB20023299A /* GFFollowerItemVC.swift */,
+			);
+			path = ItemInfoVCs;
+			sourceTree = "<group>";
+		};
 		62AA72B424454D79007879B7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,11 +173,9 @@
 		62AA72B824454DBD007879B7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				6245B323244C3E440023299A /* ItemInfoVCs */,
 				62299B9423D41AA500429309 /* GFAlertVC.swift */,
 				62AA72C0244949D5007879B7 /* GFUserInfoHeaderVC.swift */,
-				626D98E3244AB8D700EC6D88 /* GFItemInfoVC.swift */,
-				6245B31D244C39630023299A /* GFRepoItemVC.swift */,
-				6245B321244C3DB20023299A /* GFFollowerItemVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
