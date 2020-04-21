@@ -126,7 +126,7 @@ extension UserInfoVC: UserInfoVCDelegate {
     }
     
     func didTapGetFollowers(for user: User) {
-        // DismissVC
-        // Tell follower list screen the new user
+        delegate.didRequestFollwers(for: user.login)
+        dismissVC()
     }
 }

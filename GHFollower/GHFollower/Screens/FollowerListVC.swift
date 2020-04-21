@@ -155,7 +155,8 @@ extension FollowerListVC: UISearchResultsUpdating, UISearchBarDelegate {
 // MARK: - FollowerListVCDelegate
 extension FollowerListVC : FollowerListVCDelegate {
     func didRequestFollwers(for username: String) {
-        // Get follower for that user
+        // Get followers for that username
+        print("\(username) requested his/her followers")
     }
     
     
