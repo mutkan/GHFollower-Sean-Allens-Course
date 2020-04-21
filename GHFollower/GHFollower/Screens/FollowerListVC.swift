@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol FollowerListVCDelegate: class {
+    func didRequestFollwers(for username: String)
+}
+
 class FollowerListVC: UIViewController {
     
     enum Section {
@@ -144,6 +148,13 @@ extension FollowerListVC: UISearchResultsUpdating, UISearchBarDelegate {
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         isSearching = false
         updateData(on: followers)
+    }
+}
+
+// MARK: - FollowerListVCDelegate
+extension FollowerListVC : FollowerListVCDelegate {
+    func didRequestFollwers(for username: String) {
+        // Get follower for that user
     }
     
     
