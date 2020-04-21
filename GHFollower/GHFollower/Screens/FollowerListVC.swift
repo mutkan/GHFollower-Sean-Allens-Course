@@ -155,8 +155,18 @@ extension FollowerListVC: UISearchResultsUpdating, UISearchBarDelegate {
 // MARK: - FollowerListVCDelegate
 extension FollowerListVC : FollowerListVCDelegate {
     func didRequestFollwers(for username: String) {
-        // Get followers for that username
-        print("\(username) requested his/her followers")
+        // Set al the properties to their original state
+        self.username       = username
+        title               = username
+        page                = 1
+        hasMoreFollowers    = true
+        isSearching         = false
+        followers.removeAll()
+        filteredFollowers.removeAll()
+        collectionView.setContentOffset(.zero, animated: true)
+        
+        getFollowers(username: username, page: 1)
+        
     }
     
     
