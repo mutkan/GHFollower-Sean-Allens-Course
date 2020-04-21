@@ -9,7 +9,7 @@
 import UIKit
 
 protocol USerInfoVCDelegate: class {
-    func didTapGitHunProfile()
+    func didTapGitHubProfile()
     func didTapGetFollowers()
 }
 
@@ -115,8 +115,8 @@ class UserInfoVC: UIViewController {
 
 
 extension UserInfoVC: USerInfoVCDelegate {
-    func didTapGitHunProfile() {
-        // Show safari view controller
+    func didTapGitHubProfile() {
+        print("My button was tapped")
     }
     
     func didTapGetFollowers() {

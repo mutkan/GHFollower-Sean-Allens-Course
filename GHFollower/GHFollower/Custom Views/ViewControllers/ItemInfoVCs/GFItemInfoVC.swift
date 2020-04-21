@@ -32,6 +32,7 @@ class GFItemInfoVC: UIViewController {
         super.viewDidLoad()
         configureBackgroundView()
         configureStackView()
+        configureActionButton()
         layoutUI()
     }
 
@@ -49,6 +50,14 @@ class GFItemInfoVC: UIViewController {
         stackView.addArrangedSubview(itemInfoViewOne)
         stackView.addArrangedSubview(itemInfoViewTwo)
     }
+    
+    
+    private func configureActionButton() {
+        actionButton.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
+    }
+    
+    
+    @objc func actionButtonTapped() {}
     
     
     private func layoutUI() {
