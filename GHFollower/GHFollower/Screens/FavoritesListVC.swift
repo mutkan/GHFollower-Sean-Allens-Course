@@ -12,6 +12,11 @@ class FavoritesListVC: UIViewController {
     
     let tableView = UITableView()
     var favorites = [Follower]()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getFavorites()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +37,7 @@ class FavoritesListVC: UIViewController {
         view.addSubview(tableView)
         tableView.frame         = view.bounds
         tableView.rowHeight     = 80
+        
         tableView.delegate      = self
         tableView.dataSource    = self
     }
