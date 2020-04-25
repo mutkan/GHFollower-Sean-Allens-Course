@@ -203,7 +203,7 @@ extension FollowerListVC : FollowerListVCDelegate {
         isSearching         = false
         followers.removeAll()
         filteredFollowers.removeAll()
-        collectionView.scrollsToTop = true
+        collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .top, animated: true)
         
         getFollowers(username: username, page: 1)
         
