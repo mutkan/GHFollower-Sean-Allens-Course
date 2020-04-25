@@ -93,6 +93,14 @@ extension FavoritesListVC: UITableViewDelegate, UITableViewDataSource {
         destVC.title = favorite.login
         
         navigationController?.pushViewController(destVC, animated: true)
+    }
+    
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        guard editingStyle == .delete else { return }
         
+        let favorite = favorites[indexPath.row]
+        favorites.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .left)
     }
 }
