@@ -108,7 +108,7 @@ class NetworkManager {
                 let response = response as? HTTPURLResponse, response.statusCode == 200,
                 let data = data,
                 let image = UIImage(data: data) else {
-                    completed(UIImage(named: "avatar-placeholder"))
+                    completed(Images.placeHolder)
                     return
             }
             
