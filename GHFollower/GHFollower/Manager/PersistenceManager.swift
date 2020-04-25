@@ -29,4 +29,15 @@ enum PersistenceManager {
             completed(.failure(.unableToFavorites))
         }
     }
+    
+    static func save(favorites: [Follower]) -> GFError? {
+        do {
+            let encoder = JSONEncoder()
+            let encoderFavorites = try encoder.encode(favorites)
+            defaults.set(encoderFavorites, forKey: Keys.favorites)
+        } catch {
+            return .unableToFavorites
+        }
+        return nil
+    }
 }
