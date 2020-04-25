@@ -72,9 +72,11 @@ class FavoritesListVC: UIViewController {
 
 // MARK: - UITableViewDelegate, UITableViewDataSource
 extension FavoritesListVC: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return favorites.count
     }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: FavoriteCell.reuseID, for: indexPath) as! FavoriteCell
@@ -84,4 +86,13 @@ extension FavoritesListVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let favorite    = favorites[indexPath.row]
+        let destVC      = FollowerListVC()
+        destVC.username = favorite.login
+        destVC.title = favorite.login
+        
+        navigationController?.pushViewController(destVC, animated: true)
+        
+    }
 }
