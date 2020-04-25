@@ -54,7 +54,7 @@ class FavoritesListVC: UIViewController {
                 }
                 
             case .failure(let error):
-                break
+                self.presentGFAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "OK")
             }
         }
     }
