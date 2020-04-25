@@ -38,10 +38,21 @@ class FavoritesListVC: UIViewController {
     
     
     func getFavorites() {
-        PersistenceManager.retrieveFavorites { (result) in
+        PersistenceManager.retrieveFavorites { [weak self] (result) in
+            guard let self = self else { return }
+            
             switch result {
             case .success(let favorites):
-                self.favorites = favorites
+                
+                if favorites.isEmpty {
+                    self.showEmptyStateView(with: "No Favorites?\nAdd one on the follower screen.", in: self.view)
+                } else {
+                    self.favorites = favorites
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                }
+                
             case .failure(let error):
                 break
             }
