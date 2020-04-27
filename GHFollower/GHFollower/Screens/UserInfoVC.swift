@@ -14,6 +14,9 @@ protocol UserInfoVCDelegate: class {
 
 class UserInfoVC: UIViewController {
     
+    let scrollView          = UIScrollView()
+    let contentView         = UIView()
+    
     let headerView          = UIView()
     let itemViewOne         = UIView()
     let itemViewTwo         = UIView()
@@ -50,6 +53,22 @@ class UserInfoVC: UIViewController {
                 self.presentGFAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "OK")
             }
         }
+    }
+    
+    
+    func configureScrollView() {
+        view.addSubview(scrollView)
+        view.addSubview(contentView)
+        
+        scrollView.translatesAutoresizingMaskIntoConstraints    = false
+        contentView.translatesAutoresizingMaskIntoConstraints   = false
+        
+        NSLayoutConstraint.activate([
+            scrollView.topAnchor.constraint(equalTo: view.topAnchor),
+            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
     }
     
     
