@@ -25,6 +25,7 @@ class GFTitleLabel: UILabel {
         self.font = UIFont.systemFont(ofSize: fontSize, weight: .bold)
     }
     
+    
     private func configure() {
         textColor                   = .label
         adjustsFontSizeToFitWidth   = true

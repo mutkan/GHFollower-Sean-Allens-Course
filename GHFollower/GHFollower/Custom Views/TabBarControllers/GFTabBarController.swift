@@ -16,7 +16,7 @@ class GFTabBarController: UITabBarController {
         UITabBar.appearance().tintColor = .systemGreen
         let searchNC                    = createSearchNavigationController()
         let favoritesNC                 = createFavoritesNavigationController()
-        viewControllers = [searchNC, favoritesNC]
+        viewControllers                 = [searchNC, favoritesNC]
     }
     
     
