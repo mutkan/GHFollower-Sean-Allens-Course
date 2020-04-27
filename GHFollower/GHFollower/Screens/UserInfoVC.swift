@@ -114,16 +114,8 @@ class UserInfoVC: UIViewController {
 }
 
 
-extension UserInfoVC: ItemInfoVCDelegate {
-    func didTapGitHubProfile(for user: User) {
-        guard let url = URL(string: user.htmlUrl) else {
-            presentGFAlertOnMainThread(title: "Invalid URL", message: "The url attached to this user is invalid", buttonTitle: "Ok")
-            return
-        }
-        
-        presentSafariVC(with: url)
-    }
-    
+// MARK: - GFFollowerItemVCDelegate
+extension UserInfoVC: GFFollowerItemVCDelegate {
     func didTapGetFollowers(for user: User) {
         guard user.followers != 0 else {
             presentGFAlertOnMainThread(title: "No followers", message: "This user has no followers. What a shame 😢", buttonTitle: "So sad.")
@@ -131,5 +123,18 @@ extension UserInfoVC: ItemInfoVCDelegate {
         }
         delegate.didRequestFollwers(for: user.login)
         dismissVC()
+    }
+}
+
+
+// MARK: - GFRepoItemVCDelegate
+extension UserInfoVC: GFRepoItemVCDelegate {
+    func didTapGitHubProfile(for user: User) {
+        guard let url = URL(string: user.htmlUrl) else {
+            presentGFAlertOnMainThread(title: "Invalid URL", message: "The url attached to this user is invalid", buttonTitle: "Ok")
+            return
+        }
+        
+        presentSafariVC(with: url)
     }
 }
