@@ -24,8 +24,7 @@ enum PersistenceManager {
         
         retrieveFavorites { result in
             switch result {
-            case .success(let favorites):
-                var retrievedFavorites = favorites
+            case .success(var retrievedFavorites):
                 
                 switch actionType {
                 case .add:
