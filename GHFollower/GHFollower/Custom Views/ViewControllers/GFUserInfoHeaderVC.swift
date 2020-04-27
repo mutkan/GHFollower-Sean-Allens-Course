@@ -32,7 +32,7 @@ class GFUserInfoHeaderVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addSubView()
+        view.addSubviews(avatarImageView, usernameLabel, nameLabel, locationImageView, locationLabel, bioLabel)
         layoutUI()
         configureUIElements()
     }
@@ -48,11 +48,6 @@ class GFUserInfoHeaderVC: UIViewController {
         
         locationImageView.image     = SFSymbolsImages.location
         locationImageView.tintColor = .secondaryLabel // To make the location image the same color as the secondaryTitleLabel class
-    }
-    
-    
-    func addSubView() {
-        view.addSubviews(avatarImageView, usernameLabel, nameLabel, locationImageView, locationLabel, bioLabel)
     }
     
     
