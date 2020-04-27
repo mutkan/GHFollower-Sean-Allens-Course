@@ -37,6 +37,7 @@ class FavoritesListVC: GFDataLoadingVC {
         view.addSubview(tableView)
         tableView.frame         = view.bounds
         tableView.rowHeight     = 80
+        tableView.removeExcessCells()
         
         tableView.delegate      = self
         tableView.dataSource    = self
