@@ -15,12 +15,12 @@ class FollowerListVC: GFDataLoadingVC {
     }
     
     var username: String
-    var followers: [Follower] = []
-    var filteredFollowers: [Follower] = []
-    var page = 1
-    var hasMoreFollowers = true
-    var isSearching = false
-    var isLoadingMoreFollowers = false
+    var followers: [Follower]           = []
+    var filteredFollowers: [Follower]   = []
+    var page                            = 1
+    var hasMoreFollowers                = true
+    var isSearching                     = false
+    var isLoadingMoreFollowers          = false
         
     var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<Section, Follower>!
